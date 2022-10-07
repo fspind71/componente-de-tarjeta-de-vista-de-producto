@@ -1,0 +1,207 @@
+:root {
+--Dark-cyan:  #3c8067;
+--Cream:  #f2ebe3;
+--Very-dark-blue: #1c232b;
+--Dark-grayish-blue: #6c7289;
+--White: #ffffff;
+
+--montserrat:'Montserrat';
+--fraunces: 'Fraunces';
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+font-size: 62.5%;    
+font-family: 'Fraunces', serif;
+font-family: 'Montserrat', sans-serif;
+}
+
+button{
+    border: none;
+    background: none;
+    width: 100%;
+    height: 5rem;
+    font-family: var(--montserrat);
+    background-color: var(--Dark-cyan);
+    color: var(--White);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.main-container{
+    width: 100vw;
+    height: 100vh;
+    min-width: 320px;
+    background-color: var(--Cream);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.adversiting-card{
+    width: 280px;
+    background-color: var(--White);
+    border-radius: 20px 20px 20px 20px;
+    overflow: hidden;
+}
+
+.adversiting-card__img{
+    background-image: url('../Imagenes/image-product-mobile.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 280px;
+    height: 200px;
+    border-radius: 20px 20px 0 0;
+    cursor: pointer;
+    position: relative;
+   
+}
+
+.img-efect{
+    position: absolute;
+    width: 280px;
+    height: 180px;
+    left: 0;
+}
+
+.img-efect__heart {
+background-image: url('../Imagenes/corazoncito.png');
+background-size: cover;
+background-position: center;
+position: relative;
+margin-top: 20px;
+right: 100%;
+width: 100%;
+height: 100%;
+opacity: 60%;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.adversiting-card__img:hover .img-efect__heart{
+    right: 0;
+    animation-delay: .3s;
+    transition: all .3s;
+}
+
+.adversiting-card__info {
+    padding: 20px;
+    text-align: left;
+}
+
+.info__epigraph {
+    font-family: var(--montserrat);
+    font-size: 1.15rem;
+    letter-spacing: 3px;
+    color: var(--Dark-grayish-blue);
+}
+
+.info__title-1{
+    font-family: var(--fraunces);
+    font-weight: 900;
+    font-size: 2.7rem;
+    color: var(--Very-dark-blue);
+    padding-top: 15px;
+}
+
+.info__title-2 {
+    font-family: var(--fraunces);
+    font-weight: 900;
+    font-size: 2.7rem;
+    color: var(--Very-dark-blue);
+}
+
+.info__paragraph{
+    font-family: var(--montserrat);
+    color: var(--Dark-grayish-blue);
+    line-height: 2rem;
+    font-size: 1.15rem;
+    padding-top: 2rem;
+}
+
+.info__price {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.info__final-price{
+    font-family: var(--fraunces);
+    font-weight: 900;
+    font-size: 2.7rem;
+    color: var(--Dark-cyan);
+}
+
+.info__regular-price{
+    font-family: var(--montserrat);
+    color: var(--Dark-grayish-blue);
+    text-decoration: line-through;
+    font-size: 1.3rem;
+    padding-left: 1.5rem;
+}
+
+.button-shopping-cart{
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 250ms ease;
+    box-shadow: 1px 10px 8px 2px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.icon-button {
+    margin: 0 10px;
+}
+
+.button-shopping-cart:hover {
+    transform: translate(-1.5px,-1.5px);
+}
+
+.button-shopping-cart:active {
+    transform: translate(0px,0px);
+}
+
+@media(min-width: 480px) {
+    .adversiting-card{
+        width: 480px;
+        height: 410px;
+        display: flex;
+    }
+
+    .adversiting-card__img {
+        background-image: url('../Imagenes/image-product-desktop.jpg');
+        background-size: cover;
+        background-position: center;
+        width: 240px;
+        height: 420px;
+        border-radius: 20px 0px 0px 0px ;
+        
+    }
+
+    .adversiting-card__info {
+        width: 240px;
+    }
+
+    .img-efect__heart{
+        margin-top: 120px;
+        justify-content: center;
+        align-items: center;
+       
+    }
+   
+}
